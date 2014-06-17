@@ -1,0 +1,22 @@
+@mixin normal-stack {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style:  normal;
+  font-size:   16px;
+}
+
+@mixin font-x-small  { font-size: 0.8em;   }
+@mixin font-small    { font-size: 0.9em;   }
+@mixin font-normal   { font-size: 1em;     }
+@mixin font-large    { font-size: 1.25em;  }
+@mixin font-x-large  { font-size: 1.875em; }
+
+body {
+  @include normal-stack;
+  color: $copy;
+}
+
+// Use optical kerning for headers if it exists
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
+}

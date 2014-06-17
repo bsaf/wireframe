@@ -1,1 +1,6 @@
-.sass-cache
+_site/
+.sass-cache/
+.DS_Store
+s3_website.yml
+css/main.css
+js/main.js

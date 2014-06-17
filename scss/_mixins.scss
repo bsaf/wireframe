@@ -1,0 +1,42 @@
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+@mixin emulateMobile {
+  body {
+    width: 320px;
+    margin: 100px auto;
+    background-color: white;
+    background-image: url(/images/dev/linen.jpg);
+    background-attachment:fixed;
+    @media (max-width: 320px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+@mixin hide-text {
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}
+
+$screen-small:    31.25em;
+$screen-medium:   46.75em;
+$screen-large:    56.25em;
+$screen-x-large:  75em;
+
+@mixin media($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content
+  }
+}
